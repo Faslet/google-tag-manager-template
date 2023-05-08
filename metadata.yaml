@@ -1,5 +1,5 @@
 homepage: "https://faslet.me"
-documentation: "https://docs.faslet.net/docs/gtm"
+documentation: "https://docs.faslet.net/docs/widget/gtm"
 versions:
   # Latest version
   - sha: f9ead350378bb8bf04575709d982ab9863e146c6

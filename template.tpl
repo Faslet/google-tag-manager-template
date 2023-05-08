@@ -140,7 +140,7 @@ function scriptLoaded() {
   data.gtmOnSuccess();
 }
 
-const url = "https://widget.test.faslet.net/faslet-auto-config.js";
+const url = "https://widget.faslet.net/faslet-auto-config.js";
 injectScript(url, scriptLoaded, data.gtmOnFailure, url);
 
 
