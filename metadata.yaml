@@ -2,6 +2,7 @@ homepage: "https://faslet.me"
 documentation: "https://docs.faslet.net/docs/widget/gtm"
 versions:
   # Latest version
+  - sha: 91ec773555f3c63766644659def44ba896ef0e60
+    changeNotes: Update links to docs and use production server
   - sha: f9ead350378bb8bf04575709d982ab9863e146c6
-    changeNotes: |
-      Initial release
+    changeNotes: Initial release
