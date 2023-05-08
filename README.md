@@ -16,7 +16,7 @@ In order to use the GTM integration in your store, there are a few basic require
 5. You should have provided Faslet with a Google Product Feed, validated by Faslet, which includes Product Identifiers that match the ones given to Google Tag Manager
 
 If you meet all of the above requirements, it is possible to use Google Tag Manager to add Faslet's Size Me Up assistant to your web shop!
-To get started, get in touch with your [Faslet Representitive](sales@faslet.me) and we will help you get set up!
+To get started, get in touch with your [Faslet Representitive](mailto:sales@faslet.me) and we will help you get set up!
 
 ## Integrating via Google Tag Manager
 
