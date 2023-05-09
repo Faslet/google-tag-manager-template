@@ -25,6 +25,7 @@ In Google Tag Manager, create a new Tag, and select the option to browse the Com
 ![img.png](./img/step_community.png)
 
 Search for Faslet, and select the Faslet Size Me Up assistant:
+
 ![img.png](./img/step_search_faslet.png)
 
 Once selected, configure the Faslet Tag:
