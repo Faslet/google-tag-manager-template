@@ -78,39 +78,7 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "defaultValue": "{{Event}}",
-    "help": "The name of the ecommerce event that will be used to determine whether this is order tracking or a PDP."
-  },
-  {
-    "type": "TEXT",
-    "name": "orderId",
-    "displayName": "Order ID",
-    "simpleValueType": true,
-    "valueValidators": [
-      {
-        "type": "STRING_LENGTH",
-        "args": [
-          1,
-          256
-        ]
-      }
-    ],
-    "help": "The variable on the purchase event that contains the order number"
-  },
-  {
-    "type": "TEXT",
-    "name": "products",
-    "displayName": "Products Ordered",
-    "simpleValueType": true,
-    "valueValidators": [
-      {
-        "type": "STRING_LENGTH",
-        "args": [
-          1,
-          256
-        ]
-      }
-    ],
-    "help": "The variable on the purchase event that contains the products in the order"
+    "help": "The name of the ecommerce event that will be used to determine whether this is a PDP."
   }
 ]
 
@@ -125,16 +93,10 @@ const event = data.eventName;
 const shopId = data.fasletShopId;
   
 function scriptLoaded() {
-  if(event === 'view_item') {
+  if(event === 'view_item' || !event) {
     const productId = data.productId;
     const locale = data.locale || undefined;
-  
     callInWindow("showFasletButton", shopId, productId, locale);     
-  } else if(event === 'purchase') {
-    const orderId = data.orderId;
-    const products = data.products || [];
-    
-    callInWindow("trackOrders", shopId, orderId, products);
   }
   
   data.gtmOnSuccess();
@@ -183,45 +145,6 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "showFasletButton"
-                  },
-                  {
-                    "type": 8,
-                    "boolean": false
-                  },
-                  {
-                    "type": 8,
-                    "boolean": false
-                  },
-                  {
-                    "type": 8,
-                    "boolean": true
-                  }
-                ]
-              },
-              {
-                "type": 3,
-                "mapKey": [
-                  {
-                    "type": 1,
-                    "string": "key"
-                  },
-                  {
-                    "type": 1,
-                    "string": "read"
-                  },
-                  {
-                    "type": 1,
-                    "string": "write"
-                  },
-                  {
-                    "type": 1,
-                    "string": "execute"
-                  }
-                ],
-                "mapValue": [
-                  {
-                    "type": 1,
-                    "string": "trackOrders"
                   },
                   {
                     "type": 8,
